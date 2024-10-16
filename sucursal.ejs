@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.1/dist/chart.min.js"></script>
+</head>
+<body>
+    <div class="dashboard"><!-- Dashboard -->
+        <section class="navigation"><!-- Navigation -->
+            <img src="assets/img/logo-UP.jpg" alt="UP" class="logo">
+            <div>
+              <a href="http://localhost:8080/?glob=true" ><span class="material-icons-outlined" > language </span></a>
+              <a href="http://localhost:8080/?alc=AO" ><span class="material-icons-outlined"> location_city </span></a>
+              <a href="http://localhost:8080/?suc=SR" ><span class="material-icons-outlined"> store </span></a>
+            </div>
+            <img src="assets/img/User.png" alt="User Image" class="user">
+        </section><!-- Navigation End -->                
+
+        <section class="secondary"><!-- Secondary -->                            
+            <div class="title">
+                <h1>Distribuidor de fármacos</h1>
+            </div>   
+            <div class="contenedor_mapa">                
+                <%- mapa %>            
+                <h3><%= sucursal %></h3>                                                                         
+            </div>      
+        </section><!-- Secondary End -->
+
+        <section class="main"><!-- Main -->            
+            
+            <div class="Query_list"><!-- Project List -->
+                <div class="project" data-status="finished" title="Finished Project"><!-- Query 1 -->
+                    <div class="chart">
+                        <h2>Query 1</h2>
+                        <canvas id="myChart1" width="400" height="400"></canvas>
+                        <div class="complete">
+                            <h3>Info Query 1</h3>
+                            <p>from 5 projects</p>
+                        </div>
+                    </div>
+                </div><!-- Query 1 End -->
+
+                <div class="project" data-status="ongoing" title="Ongoing Project"><!-- Query 2 -->
+                    <div class="chart">
+                        <h2>Query 2</h2>
+                        <canvas id="myChart2" width="400" height="400"></canvas>
+                        <div class="complete">
+                            <h3>Info Query 2</h3>
+                            <p>from 5 projects</p>
+                        </div>
+                    </div>
+                </div><!-- Query 2 End -->
+
+                <div class="project" data-status="stalled" title="Stalled Project"><!-- Query 3 -->
+                    <div class="chart">
+                        <h2>Query 3</h2>
+                        <canvas id="myChart3" width="400" height="400"></canvas>
+                        <div class="complete">
+                            <h3>Info Query 3</h3>
+                            <p>from 5 projects</p>
+                        </div>
+                    </div>
+                </div><!-- Query 3 End -->
+
+                <div class="project" data-status="recent" title="Recent Project"><!-- Query 4 -->
+                    <div class="chart">
+                        <h2>Query 4</h2>
+                        <canvas id="myChart4" width="400" height="400"></canvas>
+                        <div class="complete">
+                            <h3>Info Query 4</h3>
+                            <p>from 5 projects</p>
+                        </div>
+                    </div>
+                </div><!-- Query 4 End -->
+
+                <div class="project" data-status="ongoing" title="Ongoing Project"><!-- Query 5 -->
+                    <div class="chart">
+                        <h2>Query 5</h2>
+                        <canvas id="myChart5" width="400" height="400"></canvas>
+                        <div class="complete">
+                            <h3>Info Query 5</h3>
+                            <p>from 5 projects</p>
+                        </div>
+                    </div>
+                </div><!-- Query 5 End -->
+
+                <div class="project" data-status="stalled" title="Stalled Project"><!-- Query6 -->
+                    <div class="chart">
+                        <h2>Query 6</h2>
+                        <canvas id="myChart6" width="400" height="400"></canvas>
+                        <div class="complete">
+                            <h3>Info Query 6</h3>
+                            <p>from 5 projects</p>
+                        </div>
+                    </div>
+                </div><!-- Query 6 End -->
+            </div><!-- Project List End -->
+        </section><!-- Main End -->
+
+        
+
+    </div><!-- Dashboard End-->
+    
+    <script src="assets/js/script.js" > </script>
+</body>
+</html>

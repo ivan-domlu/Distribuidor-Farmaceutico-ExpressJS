@@ -1,0 +1,289 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body{
+    margin: 0px;
+    height: 100vh;    
+    background-color: aliceblue;
+}
+
+.dashboard{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0px;
+}
+
+/* ==========================
+Navigation
+============================= */
+.dashboard .navigation{
+    display: flex;    
+    width: 100%; 
+    justify-content: space-between;   
+    
+}
+.dashboard .navigation img.logo{
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+}
+.dashboard .navigation img.user{
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.dashboard .navigation div .material-icons-outlined {        
+    font-family: 'Material Icons';
+    font-size: 30px;  
+    color: #727272;
+    display: inline-block;                
+    margin-top: 5px;
+    margin-bottom: 5px;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+/* ==========================
+Main Dashboard
+============================= */
+
+/* My Project */
+
+
+
+/* Project List */
+.dashboard .main .Query_list .project h2{
+    font-size: 20px;
+    line-height: 0;
+}
+.dashboard .main .Query_list .project p{
+    color: #727272;
+}
+.dashboard .main .Query_list .project ul {
+    list-style: none;
+    position: relative;
+    margin-left: 0px;
+    padding-left: 0px;
+}
+.dashboard .main .Query_list .project ul li {
+    position: relative;
+    color: #727272;
+    margin-left: 15px;
+}
+.dashboard .main .Query_list .project ul li::before {
+    content: "\268A";
+    position: absolute;
+    left: -15px;
+    top: -5px;
+}
+.dashboard .main .Query_list .project .meta img {
+    width: 50px;
+    height: 50px;
+    border-radius: 40px;
+    border: 4px solid aliceblue;
+}
+.dashboard .main .Query_list .project .meta img.stack {
+    margin-left: -20px;
+}
+.dashboard .main .Query_list .project .meta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.dashboard .main .Query_list .project {
+    padding: 10px 10px 10px 30px;
+    background-color: #fff;
+    box-shadow: 1px 1px 40px rgba( 0 0 0 / .01);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+.dashboard .main .Query_list .category {
+    width: 30px;
+    height: 50px;
+    background-color: rebeccapurple;
+    border-radius: 0px 10px 10px 0px;
+    position: absolute;
+    left: 0;
+}
+.category_color1{
+    background-color: tan !important;
+}
+.category_color2{
+    background-color: rebeccapurple !important;
+}
+.category_color3{
+    background-color: sandybrown !important;
+}
+.category_color4{
+    background-color: lightcyan !important;
+}
+
+/* ==========================
+Secondary 
+============================= */
+.dashboard .secondary .title{    
+    margin-bottom: 10%;
+    width: 100%;
+}
+.dashboard .secondary .title h1{
+    width: 100%;    
+}
+/* -- MAPA -- */
+.dashboard .secondary .contenedor_mapa {
+    width: 90%;            
+}
+
+.dashboard .secondary .contenedor_mapa .alcaldia {        
+    fill:#cacaca;
+}
+
+.dashboard .secondary .contenedor_mapa .alcaldia[disabled="false"]:hover {
+    fill: red;
+}
+
+.dashboard .secondary .contenedor_mapa .alcaldia[selected="true"]{
+    fill: red;
+}
+
+.dashboard .secondary .contenedor_mapa .sucursal {        
+    fill:#c0f8a4;    
+}
+
+.dashboard .secondary .contenedor_mapa .sucursal[disabled="false"]:hover {
+    fill: #44ad4d;
+}
+
+.dashboard .secondary .contenedor_mapa .sucursal[selected="true"]{
+    fill: #44ad4d;
+}
+/* -- FIN MAPA -- */
+
+.dashboard .secondary h3{
+    text-align: center;
+    
+}
+
+
+/* ==========================
+Media Query 768xp 
+============================= */
+@media only screen and (min-width: 530px){
+    section.main .Query_list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    section.main .Query_list .project{
+        width: 47%;
+    }
+    section.main .Query_list .project span{
+        margin-top: 15px;
+    }
+
+    /* Recent Projects */
+    section.secondary{
+        width: 100%;
+        display: block;                
+    }
+    
+    .dashboard .secondary .contenedor_mapa {
+        width: 60%;    
+        margin: auto;        
+    }
+}
+
+@media only screen and (min-width: 800px){
+    section.main{
+        width: 55%;
+        margin-left: 45%;
+        margin-right: 10px;
+    }
+
+    section.secondary{
+        width: 40%;        
+        position: fixed;
+        top: 30px;
+        left: 20px;
+        background-color: transparent;
+    }
+
+    .dashboard .secondary .contenedor_mapa {
+        width: 100%;    
+        margin: auto;        
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    .dashboard .navigation,
+    .dashboard .navigation div span,
+    section.secondary{
+        display: block;
+    }
+    .dashboard .navigation{
+        width: 60px;
+        position: fixed;
+        z-index: 10;
+    }
+    .dashboard .navigation div .material-icons-outlined { 
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    section.main{
+        width: 55%;
+        margin-left: 500px;
+        margin-right: 10px;
+        margin-top: 2%;
+    }
+    section.secondary{
+        width: 35%;        
+        position: fixed;
+        top: 30px;
+        left: 80px;
+        background-color: transparent;
+    }
+    
+    
+    .dashboard .navigation div{
+        margin-top: 19vh;
+        margin-bottom: 19vh;
+    }
+
+    .dashboard .navigation div span{
+        margin-top: 5vh;
+    }
+}
+
+@media only screen and (min-width: 1111px){
+    section.main .Query_list .project{
+        width: 47%;
+    }
+    section.main{
+        width: 60%;
+        margin-top: 2%;
+    }
+    section.secondary{
+        width: 30%;   
+    }
+}
+
+@media only screen and (min-width: 1500px){
+    section.secondary .recent_project .listing:nth-child(4){
+        display: none;
+    }
+}
+
+
+

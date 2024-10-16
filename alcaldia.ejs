@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.1/dist/chart.min.js"></script>
+</head>
+<body>
+    <div class="dashboard"><!-- Dashboard -->
+        <section class="navigation"><!-- Navigation -->
+            <img src="assets/img/logo-UP.jpg" alt="UP" class="logo">
+            <div>
+              <a href="http://localhost:8080/?glob=true" ><span class="material-icons-outlined" > language </span></a>
+              <a href="http://localhost:8080/?alc=AO" ><span class="material-icons-outlined"> location_city </span></a>
+              <a href="http://localhost:8080/?suc=SR" ><span class="material-icons-outlined"> store </span></a>
+            </div>
+            <img src="assets/img/User.png" alt="User Image" class="user">
+        </section><!-- Navigation End -->                
+
+        <section class="secondary"><!-- Secondary -->                            
+            <div class="title">
+                <h1>Distribuidor de fármacos</h1>
+            </div>   
+            <div class="contenedor_mapa">                
+                <%- mapa %>            
+                <h3><%= alcaldia %></h3>                                                                         
+            </div>      
+        </section><!-- Secondary End -->
+
+        <section class="main"><!-- Main -->                        
+            <div class="Query_list"><!-- Project List -->
+                <div class="project" data-status="finished" title="Finished Project"><!-- Query 1 -->
+                    <p>Pedidos totales</p>
+                    <h3><%= pedidos_totales %> pedidos</h3>                
+                    <p>Sucursal que más atendió</p>
+                    <h3><%= sucursal_top %></h3>
+                </div><!-- Query 1 End -->
+
+                <div class="project" data-status="ongoing" title="Finished Project"><!-- Query 1 -->
+                    <div class="chart">
+                        <h2>Entrega de los pedidos</h2>
+                        <canvas id="myChart1" width="400" height="400"></canvas>                        
+                    </div>
+                </div><!-- Query 1 End -->
+
+                <div class="project" data-status="ongoing" title="Finished Project"><!-- Query 1 -->
+                    <div class="chart">
+                        <h2>Pedidos por mes</h2>
+                        <canvas id="myChart2" width="400" height="400"></canvas>                        
+                    </div>
+                </div><!-- Query 1 End -->
+                <div class="project" data-status="ongoing" title="Finished Project"><!-- Query 1 -->
+                    <div class="chart">
+                        <h2>Pedidos por sucursal</h2>
+                        <canvas id="myChart3" width="400" height="400"></canvas>                        
+                    </div>
+                </div><!-- Query 1 End -->
+            </div><!-- Project List End -->
+        </section><!-- Main End -->
+
+        
+
+    </div><!-- Dashboard End-->
+    
+    <%- javascript%>
+</body>
+</html>
